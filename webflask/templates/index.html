@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+
+<html>
+  <head>
+    <style>
+      body {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url({{url_for(
+            "static",
+            filename= "images/fit-female-swimmer-by-pool-leisure-center.jpg"
+          )}});
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
+{% endblock content %}

@@ -1,0 +1,153 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+  <div class="row align-items-center g-lg-5 py-5">
+    <div class="col-lg-7 text-center text-lg-start">
+      <h1 class="display-4 fw-bold lh-1 mb-3">Member Form</h1>
+      <p class="col-lg-10 fs-4">Add Member.</p>
+    </div>
+    <div class="col-md-10 mx-auto col-lg-5">
+      <form method="post" class="p-4 p-md-5 border rounded-3 bg-light">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="Firstname"
+            name="Firstname"
+            placeholder="First Name"
+            value="{{request.form['Firstname']}}"
+          />
+
+          <!-- title = request.form["Title"]
+        artist = request.form["Artist"]
+        genre = request.form["Genre"] we need to stick these there up to grab whatever entered in the input-->
+
+          <label for="Member">Firstname</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="Lastname"
+            name="Lastname"
+            placeholder="Lastname"
+            value="{{request.form['Lastname']}}"
+          />
+          <label for="Member">Lastname</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="DOB"
+            name="DOB"
+            placeholder="Date of Birth"
+            value="{{request.form['DOB']}}"
+          />
+          <!--request.form["Artist"]-->
+          <label for="Member">DOB</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="Gender"
+            name="Gender"
+            placeholder="Gender"
+            value="{{request.form['Gender']}}"
+          />
+          <!--request.form["Artist"]-->
+          <label for="Member">Gender</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="Address"
+            name="Address"
+            placeholder="Address"
+            value="{{request.form['Address']}}"
+          />
+          <!--request.form["Artist"]-->
+          <label for="Member">Address</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="City"
+            name="City"
+            placeholder="City"
+            value="{{request.form['City']}}"
+          />
+          <!--request.form["Artist"]-->
+          <label for="Member">City</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="Telephone"
+            name="Telephone"
+            placeholder="Telephone"
+            value="{{request.form['Telephone']}}"
+          />
+
+          <label for="Member">Telephone</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="Email"
+            name="Email"
+            placeholder="Type your email"
+            value="{{request.form['Email']}}"
+          />
+
+          <label for="Member">Email</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="Startdate"
+            name="Startdate"
+            placeholder="Joining date"
+            value="{{request.form['Startdate']}}"
+          />
+
+          <label for="Member">Joining date</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="Membership"
+            name="Membership"
+            placeholder="Membership"
+            value="{{request.form['Membership']}}"
+          />
+          <label for="Member">Member status</label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary" type="submit">
+          Add Member
+        </button>
+        <hr class="my-4" />
+        <small class="text-muted">
+          Add confirmation will be displayed here</small
+        >
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

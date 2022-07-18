@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Bootstrap icon fonts stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet" type="text/css"
+      href="{{ url_for('static', filename='css/styles.css')}}"
+    />
+    <!-- if the page has a variable called title -->
+    {% if title %}
+    <!--get the value from the title variable and display it as the page title on the tab of the webpage-->
+    <title>{{title}}</title>
+    <!--  else if the page does not have title variable -->
+    {% else %}
+
+    <!-- display the default title 'LeisureCentre Manager Web App' on the tab of the web age -->
+    <title>LeisureCentre Manager Web App</title>
+    <!--  end -->
+    {% endif %}
+  </head>
+  <!--Base.html will have changing parts-->
+  <!--now we need to arrange elements for our webapp and its nav links for clicking and displaying functionality of the app-->
+  <!---->
+
+  <body>
+    <header class="container">
+     
+        <nav class="navbar navbar-expand-md navbar-light">    <!--navbar-expand-md navbar-light-->
+          <h1>Welcome to LeisureCentreManager</h1>
+          <ul class="navbar-nav ms-auto text-center">
+            <li><a class="nav-link" href="{{url_for('index')}}">Home</a></li>
+            <li>
+              <a class="nav-link" href="{{url_for('members')}}">Members</a>
+            </li>
+            <li>
+              <a class="nav-link" href="{{url_for('addMember')}}">Add Member</a>
+            </li>
+            
+            <li><a class="nav-link" href="{{url_for('about')}}">About</a></li>
+            <li>
+              <a class="nav-link" href="{{url_for('contact')}}">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <section>{% block content %} {% endblock content %}</section>
+    <!--<footer><h3>This is footer where tel number etc come in</h3></footer>-->
+  </body>
+</html>
